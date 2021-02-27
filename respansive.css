@@ -1,0 +1,63 @@
+@media only screen and (max-width: 650px) {
+    nav ul#mainmenu {
+        display: none;
+    }
+
+    nav #mobail {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    section.slideShow figure figcaption.pf {
+        padding: 5px 10px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    section.slideShow figure img {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    main.maincall {
+        background: radial-gradient(circle, rgb(34, 193, 195) 0%, rgb(253, 187, 45) 100%);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .sectionarticel{display: inline-block;
+        width: 100%;
+        box-shadow: 1px 5px 20px 0px rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        padding: 22px;
+        margin: 12px 3px;
+        vertical-align: top;}}
+
+@media only screen and (max-width:800px) {
+    .articelsingle img{width: 100%;margin: 0 ;
+        }}
+
+    @media only screen and (max-width: 500px) {
+        p.footerp {
+            background: #66BB6A;
+            text-align: center;
+            width: 100%;
+            color: #fff;
+            line-height: 2em;
+            font-size: 0.6em;
+            box-sizing: border-box;
+            padding: 0 10px;}
+    }
+@media only screen and (max-width: 500px) {
+    h1.footertitle {
+        background: #FFEE58;
+        padding: 4px 6px;
+        margin: 6px auto;
+        text-align: center;
+        font-size: 0.8em;
+        box-sizing: border-box;
+    }
+}
+
