@@ -1,5 +1,6 @@
 <?php
-function alert($text,$type){
+include 'DB.php';
+function alertTemplate($text,$type){
 switch ($type){
     case 'success':
         echo "

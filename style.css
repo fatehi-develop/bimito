@@ -408,7 +408,7 @@ section figure figcaption.pf {
 }
 
 section.slideShow figure img {
-    width: 14%;
+    width: 25%;
     float: left;
     padding: 61px;
 }
@@ -532,3 +532,7 @@ a.imgabout {
 .btn-close {
     margin: 0;
 }
+.mainproduct{background:#eee;padding:6px 14px;}
+.titrproduct{background: burlywood;
+color: #fff;
+padding: 4px 5px;}

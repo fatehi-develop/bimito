@@ -1,5 +1,5 @@
 <?php
-include 'function.php';
+include 'includes/function.php';
 ?>
 <!DOCTYPE html>
 <html lang="fa">
@@ -64,7 +64,7 @@ include 'function.php';
 </nav>
 <h1 class="callus">ارتباط با ما</h1>
 <?php if (isset($_GET['ok'])){
-    alert('ثبت با موفقیت انجام شد','success');
+    alertTemplate('ثبت با موفقیت انجام شد','success');
 } ?>
 <main class="maincall">
     <form action="contactus.php" method="post">
