@@ -1,5 +1,5 @@
 <?php
-include 'includes/setting.php';
+include '../includes/setting.php';
 $contactinfo=$_POST['frm'];
 $dbc = new mysqli(DBHOST, DBUSER,DBPASS, DBNAME);
 //$dbc = new mysqli('sql302.b6b.ir', 'b6bi_27931308', 'afpmsaep3254179', 'b6bi_27931308_academybime');

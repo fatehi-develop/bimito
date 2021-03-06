@@ -1,6 +1,6 @@
 <?php
-include 'includes/setting.php';
-include ('includes/function.php') ;
+include '../includes/setting.php';
+include ('../includes/function.php') ;
 $alert = '';
 if( isset( $_POST['submit'] ) ){
     $imgSrc = 'assets/images/image.jpg';
