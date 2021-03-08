@@ -1,23 +1,35 @@
 <?php
 include 'DB.php';
-function alertTemplate($text,$type){
-switch ($type){
-    case 'success':
-        echo "
-         <div class='alert alert-success alert-dismissible fade show' role='alert'>
-          $text
-         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-         </div>
-        ";
-        break;
-    case  'error':
-        echo "
-         <div class='alert alert-danger alert-dismissible fade show' role='alert'>
-          .$text.
-         <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-         </div>
-        ";
-        break;
+if (!function_exists('alertTemplate')) {
+    function alertTemplate($text, $type = 'error')
+    {
+        switch ($type) {
+            case 'success':
+                break;
+            case 'warning':
+                break;
+            case 'error':
+                $type = 'danger';
+        }
+        $alert = "
+				<article class = 'alert alert-{$type} alert-dismissible fade show' role='alert'>
+					{$text}
+					<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+				</article>";
+        return $alert;
+    }
 }
-
+if (!function_exists('alerts')) {
+    function alerts($text = '', $type = 'error')
+    {
+        static $alerts = '';
+        if ($text !== '') {
+            $alerts .= alertTemplate($text, $type);
+        } elseif ($alerts !== '') {
+            $result = $alerts;
+            $alerts = '';
+            return $result;
+        } else
+            return false;
+    }
 }

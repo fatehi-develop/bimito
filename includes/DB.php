@@ -2,11 +2,12 @@
 if(! class_exists('DB')) {
 	class DB{
 		var $dbc;
-		function __construct(){
-			$this -> connect();
-			$this -> selectDB();
-			$this -> dbc -> set_charset( CHARSET );
-		}
+        function __construct( $selectDB = true ){
+            $this -> connect();
+            if( $selectDB )
+                $this -> selectDB();
+            $this -> dbc -> set_charset( CHARSET );
+        }
 		
 		function connect(){
 			$this -> dbc = new mysqli(DBHOST, DBUSER, DBPASS);

@@ -10,10 +10,13 @@ if( ! defined('DBNAME') )
 
 if( ! defined('CHARSET') )
     define( 'CHARSET', 'utf8mb4' );
+if( ! defined('COLLATE') )
+    define( 'COLLATE', 'utf8mb4_general_ci' );
 
 $dbHost =	DBHOST;
 $dbUser =	DBUSER;
 $dbPass =	DBPASS;
-$dbname =	DBNAME;
-
+$dbName =	DBNAME;
 $charset =	CHARSET;
+$collate =	COLLATE;
+$softSetup = false;
