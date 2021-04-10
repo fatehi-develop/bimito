@@ -1,20 +1,27 @@
 <?php
 include '../includes/setting.php';
-include ('../includes/function.php') ;
+include('../includes/function.php');
 $alert = '';
-if( isset( $_POST['submit'] ) ){
-    $imgSrc = 'assets/images/image.jpg';
+if (isset($_POST['submit'])) {
 
-    $sql = "INSERT INTO Product (name, price, weekday, timeFrom, timeTo, imgSrc, description) 
-	VALUES('{$_POST['name']}', {$_POST['price']},'{$_POST['weekday']}', '{$_POST['timeFrom']}', '{$_POST['timeTo']}', '{$imgSrc}', '{$_POST['description']}')";
+    $imgSrc = 'assets/images/image.jpg';
+    $_POST['$imgSrc']=$imgSrc;
+    unset($_POST['submit']);
+    $_POST['imgSrc'] = $imgSrc;
 
     $db = new DB();
+    $product = array(
+        "name" => "{$_POST['name']}",
+        "price" => "{$_POST['price']}",
+        "weekday" => "{$_POST['weekday']}",
+        "timeFrom" => "{$_POST['timeFrom']}",
+        "timeTo" => "{$_POST['timeTo']}",
+        "imgSrc" => "{$_POST['imgSrc']}",
+        "description" => "{$_POST['description']}",
 
-    $result = $db -> execute( $sql );
-    unset( $db );
+    );
+    Product::add($product);
+    unset($db);
 
-    if( $result )
-        $alert = alertTemplate('با موفقیت ثبت شد!', 'success');
-
-
+    $alerts = alerts();
 }

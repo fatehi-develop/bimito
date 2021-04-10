@@ -2,22 +2,30 @@
 
 include '../includes/setting.php';
 include('../includes/function.php');
-$alert = '';
-if (isset($_POST['submit'])) {
-    $imgSrc = 'assets/images/image.jpg';
 
-    $sql = "INSERT INTO users (name , date, username, email, gender, ostan, adress,password) 
-	VALUES('{$_POST['name']}', '{$_POST['date']}','{$_POST['username']}', '{$_POST['email']}', '{$_POST['gender']}', '{$_POST['ostan']}','{$_POST['adress']}','{$_POST['password']}')";
+if (isset($_POST['submit'])) {
+
+    $imgSrc = 'assets/images/image.jpg';
+    $_POST['$imgSrc']=$imgSrc;
+    unset($_POST['submit']);
+    $_POST['imgSrc'] = $imgSrc;
 
     $db = new DB();
+    $user = array(
+        "name" => "{$_POST['name']}",
+        "date" => "{$_POST['date']}",
+        "username" => "{$_POST['username']}",
+        "email" => "{$_POST['email']}",
+        "gender" => "{$_POST['gender']}",
+        "ostan" => "{$_POST['ostan']}",
+        "adress" => "{$_POST['adress']}",
+        "password" => "{$_POST['password']}",
 
-    $result = $db->execute($sql);
+    );
+    Users::add($user);
     unset($db);
 
-    if ($result)
-        $alert = alertTemplate('با موفقیت ثبت شد!', 'success');
-
-
+    $alerts = alerts();
 }
 
 ?>
