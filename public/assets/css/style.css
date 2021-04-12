@@ -415,19 +415,19 @@ section.slideShow figure img {
 
 
 .mainarticel {
-    width: 93%;
-    margin: 0 auto;
+    /*width: 93%;*/
+    /*margin: 0 auto;*/
 }
 
 .sectionarticel {
-    display: inline-block;
-    width: 48%;
-    height: max-content;
+    /*display: inline-block;*/
+    /*width: 48%;*/
+    /*height: max-content;*/
     box-shadow: 1px 5px 20px 0px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     padding: 22px;
     margin: 12px 3px;
-    vertical-align: top;
+    /*vertical-align: top;*/
 }
 
 .sectionarticel img {
@@ -478,16 +478,34 @@ section.slideShow figure img {
     color: gold;
 }
 
-.sectionarticel .maxmax {
+.sectionarticel .maxmax-red {
     border: 1px solid #822a85;
     text-align: center;
-    color: #822a85;
+    color: #ca1b2a;
     width: 100%;
     display: block;
+    margin-bottom: 9px;
 }
 
-.sectionarticel .maxmax:hover {
-    background: linear-gradient(137deg, #822a85 24%, #c2367a 78%, #ee5b68 129%);
+.sectionarticel .maxmax-red:hover {
+    background: #CB356B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BD3F32, #CB356B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BD3F32, #CB356B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: none;
+}
+.sectionarticel .maxmax-edit {
+    border: 1px solid #822a85;
+    text-align: center;
+    color: #2241db;
+    width: 100%;
+    display: block;
+    margin-bottom: 9px;
+}
+
+.sectionarticel .maxmax-edit:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     color: #fff;
     border: none;
 }
@@ -538,4 +556,10 @@ color: #fff;
 padding: 4px 5px;}
 select option{
     font-family: IRANSans !important;
+}
+.price{
+    margin-bottom: 10px;
+    display: inline-block;
+    color: #4a4848;
+
 }

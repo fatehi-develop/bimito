@@ -38,7 +38,12 @@ if(! class_exists('DB')) {
 						<section lang = 'en'>{$sql}<br>
 						{$this -> dbc -> error}</section>";
 				die( $error );
+				return false;
 			}
+			elseif ($result !== true  && $result !== false){
+                $table = $result -> fetch_all(MYSQLI_ASSOC);
+                return $table;
+            }
 			else
 				return true;
 		}

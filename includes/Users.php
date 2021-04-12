@@ -35,8 +35,17 @@ if (!class_exists('Users')) {
         {
         }
 
-        static function find()
+        static function find($where='TRUE',$order='id DESC',$count=4,$ofset=0
+        )
         {
+            $tablename=get_class();
+            $sql="SELECT * FROM {$tablename}
+           WHERE {$where}
+            ORDER BY {$order}
+            LIMIT $ofset,$count
+            ";
+            $result = $GLOBALS['db']->execute($sql);
+            return $result;
         }
     }
 }
