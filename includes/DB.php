@@ -1,4 +1,5 @@
 <?php
+include 'Tables.php';
 include 'Product.php';
 include 'Users.php';
 if(! class_exists('DB')) {

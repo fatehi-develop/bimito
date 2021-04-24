@@ -38,6 +38,7 @@ timeFrom VARCHAR(30),
 timeTo VARCHAR(30),
 imgSrc VARCHAR(255),
 description TEXT,
+    status VARCHAR(20) ,
 PRIMARY KEY(id)
 )ENGINE = INNODB";
 $result = $db -> execute( $sql );
@@ -53,6 +54,8 @@ gender VARCHAR(30),
 ostan VARCHAR(35),
 adress TEXT,
 password VARCHAR(35),
+        status VARCHAR(20) ,
+
 PRIMARY KEY(id)
 )ENGINE = INNODB";
 $result = $db -> execute( $sql );

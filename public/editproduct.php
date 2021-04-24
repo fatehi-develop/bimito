@@ -24,7 +24,6 @@ if( isset( $_GET['id'] ) ) {
 }
 else{
     alerts('شناسه کاربر نامشخص!');
-    //redirect
 }
 
 $alerts = alerts();

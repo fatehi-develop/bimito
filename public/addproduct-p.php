@@ -18,7 +18,6 @@ if (isset($_POST['submit'])) {
         "timeTo" => "{$_POST['timeTo']}",
         "imgSrc" => "{$_POST['imgSrc']}",
         "description" => "{$_POST['description']}",
-
     );
     Product::add($product);
     unset($db);
