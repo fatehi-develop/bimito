@@ -8,7 +8,6 @@ $sql = "DROP DATABASE IF EXISTS {$dbName}";
 $db->execute($sql);
     alerts("دیتابیس {$dbName} و جداول آن حذف شد", 'success');
 }
-
 $sql = "CREATE DATABASE IF NOT EXISTS {$dbName}
 CHARSET {$charset}
 COLLATE {$collate}";

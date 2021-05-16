@@ -2,30 +2,32 @@
 include 'DB.php';
 if( ! function_exists('get_header') ){
     function get_header($name = null, $args = array()){
-        if( isset( $name ) )
-            $name = "-{$name}";
-        include "view/templates/header{$name}.php";
+        get_template_part('header');
     }
 }
 if( ! function_exists('get_sidebar') ){
     function get_sidebar($name = null, $args = array()){
-        if( isset( $name ) )
-            $name = "-{$name}";
-        include "view/templates/sidebar{$name}.php";
+        get_template_part('sidebar');
+
     }
 }
 if( ! function_exists('get_footer') ){
     function get_footer($name = null, $args = array()){
-        if( isset( $name ) )
-            $name = "-{$name}";
-        include "view/templates/footer{$name}.php";
+        
+        get_template_part('footer');
     }
 }
 if( ! function_exists('get_template_part') ){
     function get_template_part($slug, $name = null, $args = array()){
-        if( isset( $name ) )
-            $name = "-{$name}";
-        include "view/templates/{$slug}{$name}.php";
+       // extract($args);
+       if( isset( $name ) )
+       $name = "-{$name}";
+      $__pathtotemplate= "view/templates/{$slug}{$name}.php";
+        foreach($args as $key=>$value){
+           $$key=htmlspecialchars($value);
+        }
+        include $__pathtotemplate;
+     
     }
 }
 if (!function_exists('alertTemplate')) {
@@ -61,3 +63,8 @@ if (!function_exists('alerts')) {
             return false;
     }
 }
+     function persian_number( $input ) {
+		$persian_number=array('۰','۱','۲','۳','۴','۵','۶','۷','۸','۹');
+		$en_number=array('0','1','2','3','4','5','6','7','8','9');
+		return str_replace($en_number,$persian_number,$input);
+	}
