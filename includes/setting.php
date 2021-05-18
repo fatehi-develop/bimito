@@ -12,7 +12,8 @@ if( ! defined('CHARSET') )
     define( 'CHARSET', 'utf8mb4' );
 if( ! defined('COLLATE') )
     define( 'COLLATE', 'utf8mb4_general_ci' );
-
+if( ! defined('SITEURL') )
+define( 'SITEURL', '/web/public/' );
 $dbHost =	DBHOST;
 $dbUser =	DBUSER;
 $dbPass =	DBPASS;

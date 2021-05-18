@@ -1,7 +1,8 @@
 <?php
 //$dbc = new mysqli('sql302.b6b.ir', 'b6bi_27931308', 'afpmsaep3254179', 'b6bi_27931308_academybime');
-include '../includes/setting.php';
-include('../includes/function.php');
+include '__php__.php';
+include SITE_INC.'setting.php';
+include SITE_INC.'function.php';
 $alert = '';
 if (isset($_POST['submit'])) {
 

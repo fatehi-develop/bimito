@@ -1,6 +1,7 @@
 <?php
-include '../includes/setting.php';
-include '../includes/function.php';
+include '__php__.php';
+include SITE_INC.'setting.php';
+include SITE_INC.'function.php';
 $id=$_GET['id'];
 $db = new DB();
 $table=Product::find("id={$id}");

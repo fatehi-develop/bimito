@@ -1,7 +1,7 @@
 <?php get_header();?>
 <h1 class="callus">ارتباط با ما</h1>
 <?php if (isset($_GET['ok'])){
-    alert('ثبت با موفقیت انجام شد','success');
+    alerts('ثبت با موفقیت انجام شد','success');
 } ?>
 <main class="mainproduct">
     <form action="" method="post">

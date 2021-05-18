@@ -16,15 +16,20 @@
     <h1>آکـادمی بیــــمه</h1>
     <h2>آموزش فــــــروش و بازایــابی بیمه</h2>
 </header>
-<nav>
-    <div id="mobail">
-        منـــــو
-        <ul>
-            <li class=""><a href="index.html">صفحه اصلی</a></li>
-
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo SITEURL;?>index.php">خانه</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link" href="<?php echo SITEURL;?>catalog.php">مقاله</a>
+        </li>
+      </ul>
     </div>
-    <ul id="mainmenu">
-        <li class=""><a href="index.html">صفحه اصلی</a></li>
-    </ul>
+  </div>
 </nav>
