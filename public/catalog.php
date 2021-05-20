@@ -5,5 +5,4 @@ include SITE_INC.'function.php';
 $db = new DB();
 $table=Product::find();
 unset($db);
-include '../includes/view/catalog.php';
-?>
+view('catalog', null, ['table' => $table]);?>
